@@ -8,10 +8,8 @@ import type { AppProps } from 'next/app';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <FaustProvider client={client} pageProps={pageProps}>
-        <Component {...pageProps} />
-      </FaustProvider>
-    </>
+    <FaustProvider client={client} pageProps={pageProps}>
+      <Component {...pageProps} />
+    </FaustProvider>
   );
 }
